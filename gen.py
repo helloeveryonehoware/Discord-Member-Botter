@@ -68,7 +68,7 @@ def gen():
     username = generate_username()
     username = username[0]
     username = str(username)
-    captchakey = Solver(UID="55f3955fc0f04647907b7fdcfb3c880d", APIKEY="c2cb072e-2c9d-f2ca-63ab-a0f631b96878", site_key="4c672d35-0701-42b2-88c3-78380b0db560", website_url="discord.com", proxyless=True,proxy='https://proxy.com', endpoint_url="https://free.nocaptchaai.com/api/solve").SolveCaptcha()
+    captchakey = Solver(UID="55f3955fc0f04647907b7fdcfb3c880d", APIKEY="c2cb072e-2c9d-f2ca-63ab-a0f631b96878", site_key="4c672d35-0701-42b2-88c3-78380b0db560", website_url="discord.com", proxyless=False,proxy=f'https://{proxy}', endpoint_url="https://free.nocaptchaai.com/api/solve").SolveCaptcha()
     r = requests.post('https://discord.com/api/v9/auth/register', headers=headers,
                     json={'username': username,
                           'email': ''.join(random.choices(string.ascii_uppercase + string.digits, k=7)) + '@gmail.com', 'password': 'Santaco2468',
